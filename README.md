@@ -14,7 +14,7 @@ A Ozcan, C Perego, M Salvalaglio, M Parrinello, O Yazaydin [Chem Sci 8 (5), 3858
 
 The version hosted here has been developed by [Dr. Claudio Perego](https://scholar.google.co.uk/citations?user=TwqxhpUAAAAJ) and is maintained by the [Salvalaglio](http://www.ucl.ac.uk/molecular-modelling) and [Yazaydin](https://www.ucl.ac.uk/~ucecoya/) groups at [UCL Chemical Engineering](https://www.ucl.ac.uk/chemical-engineering/). 
 
-The method has been further developed into a "cannibalistic" variant, and to model crystal nucleation at constant supersaturation by [Dr. Tarak Karmakar](https://scholar.google.co.uk/citations?hl=en&user=LWBFC34AAAAJ). 
+The method has been further developed in the Parrinello group by [Dr. Tarak Karmakar](https://scholar.google.co.uk/citations?hl=en&user=LWBFC34AAAAJ). Further developments include a "cannibalistic" variant, and a spherical geometry which enables to model crystal nucleation at constant supersaturation. 
 
 
 __Usage__ 
@@ -27,6 +27,7 @@ __NB:__ _CMUMD is defined among CVs in PLUMED, but IT IS NOT an actual CV. Deriv
 __To use CmuMD, copy CMUMD.cpp in the $PLUMED_DIR/src/colvar directory and compile plumed__
 
 Example applications to solid/liquid interfaces and fluxes through porous materials will be added to this repository. 
+
 
 
 
