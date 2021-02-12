@@ -26,7 +26,11 @@ __NB:__ _CMUMD is defined as a CV but IT IS NOT an actual CV, the derivatives ar
 
 The forces are then applied by using the `RESTRAINT` keyword in PLUMED 2 (see the examples following). The method as implemented in this repository can be applied only to a planar geometry. 
 
+<<<<<<< HEAD
 __In order to install CmuMD:__ 
+=======
+__To use CmuMD, copy Cmumd.cpp in the $PLUMED_DIR/src/colvar directory and compile plumed__
+>>>>>>> Update README.md
 
 1. Download the file `Cmumd.cpp` 
 2. Copy the source code in the PLUMED source directory:  
