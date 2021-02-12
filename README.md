@@ -24,7 +24,7 @@ CMUMD is implemented using the RESTRAINT keyword (performing CmuMD), or  monitor
 
 __NB:__ _CMUMD is defined among CVs in PLUMED, but IT IS NOT an actual CV. Derivatives are incorrect for any typical CV use._
 
-__To use CmuMD, copy CMUMD.cpp in the $PLUMED_DIR/src/colvar directory and compile plumed__
+__To use CmuMD, copy Cmumd.cpp in the $PLUMED_DIR/src/colvar directory and compile plumed__
 
 Example applications to solid/liquid interfaces and fluxes through porous materials will be added to this repository. 
 
