@@ -18,14 +18,14 @@ The version hosted here has been developed by [Dr. Claudio Perego](https://schol
 The method has been further developed into a "cannibalistic" variant, and to model crystal nucleation at constant supersaturation by [Dr. Tarak Karmakar](https://scholar.google.co.uk/citations?hl=en&user=LWBFC34AAAAJ). 
 
 
->__Usage__ 
->
->CMUMD is defined as a PLUMED 2 Collective Variable (CV), the purpose of which is that of performing CmuMD.
->CMUMD is implemented using the RESTRAINT keyword (performing CmuMD), or  monitored. The method as it is implemented here can be applied only to a planar >geometry. 
+__Usage__ 
 
->__NB:__ _CMUMD is defined among CVs in PLUMED, but IT IS NOT an actual CV. Derivatives are incorrect for any typical CV use._
+CMUMD is defined as a PLUMED 2 Collective Variable (CV), the purpose of which is that of performing CmuMD.
+CMUMD is implemented using the RESTRAINT keyword (performing CmuMD), or  monitored. The method as it is implemented here can be applied only to a planar geometry. 
 
->__To use CmuMD, copy CMUMD.cpp in the $PLUMED_DIR/src/colvar directory and compile plumed__
+__NB:__ _CMUMD is defined among CVs in PLUMED, but IT IS NOT an actual CV. Derivatives are incorrect for any typical CV use._
+
+__To use CmuMD, copy CMUMD.cpp in the $PLUMED_DIR/src/colvar directory and compile plumed__
 
 Example applications to solid/liquid interfaces and fluxes through porous materials will be added to this repository. 
 
