@@ -1,0 +1,12 @@
+
+[	moleculetype	]							
+;	Name	nrexcl							
+Meta	1								
+									
+[	atoms	]							
+;	nr	type	resnr	residue	atom	cgnr			
+	1	CH4	1	Meta	CH4	1	
+
+[	system	]							
+;	Name							
+Meta									
