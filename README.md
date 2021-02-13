@@ -1,4 +1,4 @@
-# CmuMD 
+# CμMD Implementation for PLUMED2
 
 This repository hosts the implementation for [PLUMED 2](https://www.plumed.org) of the CmuMD method, which allows to mimic open boundary conditions in NVT molecular simulations involving solid/fluid interfaces, and enables the simulation of concentration-driven fluxes through porous membranes. 
 
