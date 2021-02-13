@@ -37,7 +37,7 @@ __In order to install CmuMD:__
 ### Example 1: Concentration Driven Flux
 
 This example reports the PLUMED file used to implement the method discussed in [Ozcan et al., Chem Sci, 2017](https://pubs.rsc.org/en/content/articlepdf/2017/sc/c6sc04978h). 
-The input files of for the simulation are available in `Examples/Example1_methane_permeation_in_ZIF-8_membrane`
+The input files of for a typical simulation are available in `Examples/Example1_methane_permeation_in_ZIF-8_membrane`
 
 ```
 GROUP ATOMS=5361-5785:1 LABEL=solute
@@ -50,6 +50,7 @@ RESTRAINT ARG=RIGHT AT=0.0   KAPPA=500000.0 LABEL=rres
 
 PRINT ARG=LEFT,RIGHT STRIDE=500 FILE=COLVAR_2
 ```
+
 
 1. `GROUP` defines the group of atoms that are monitored to bias and monitor the density. More about the syntax of `GROUP` can be found in the [PLUMED 2 manual](https://www.plumed.org/doc-v2.6/user-doc/html/_g_r_o_u_p.html) 
 
