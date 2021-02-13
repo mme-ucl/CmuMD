@@ -1,0 +1,57 @@
+;define		= -DPOSRES	; Protein is position restrained (uses the posres.itp file information)
+; Parameters describing the details of the NVT simulation protocol
+integrator	= md		; Algorithm ("md" = molecular dynamics [leap-frog integrator]; "md-vv" = md using velocity verlet; sd = stochastic dynamics)
+dt		= 0.001		; Time-step (ps)
+nsteps		= 50000000  	; Number of steps to run (0.002 * 500000 = 1 ns)
+
+; Parameters controlling output writing
+nstxout		= 100		; Write coordinates to output .trr file every 2 ps
+nstvout		= 10000		; Write velocities to output .trr file every 2 ps
+nstenergy	= 10000		; Write energies to output .edr file every 2 ps
+nstlog		= 1000		; Write output to .log file every 2 ps
+
+; Parameters describing neighbors searching and details about interaction calculations
+cutoff-scheme = Verlet       ; pair list with buffering                                              
+nstlist       = 2            ; Frequency to update the neighbor list                                 
+ns-type       = grid         ; Make a grid in the box and only check atoms in neighboring grid cells 
+pbc           = xyz          ; Periodic boundary conditions in all directions 
+rlist		= 1.2		; Neighbor list search cut-off distance (nm)
+rcoulomb	= 1.2		; Short-range Coulombic interactions cut-off distance (nm)
+rvdw		= 1.2		; Short-range van der Waals cutoff distance (nm)
+
+; Parameters for treating bonded interactions
+continuation	= no		; Whether a fresh start or a continuation from a previous run (yes/no)
+;constraint_algorithm = LINCS	; Constraint algorithm (LINCS / SHAKE)
+;constraints	= all-bonds	; Which bonds/angles to constrain (all-bonds / hbonds / none / all-angles / h-angles)
+;lincs_iter	= 1		; Number of iterations to correct for rotational lengthening in LINCS (related to accuracy)
+;lincs_order	= 4		; Highest order in the expansion of the constraint coupling matrix (related to accuracy)
+
+; Parameters for treating electrostatic interactions
+coulombtype	= PME		; Long range electrostatic interactions treatment (cut-off, Ewald, PME)
+pme_order	= 4		; Interpolation order for PME (cubic interpolation is represented by 4)
+fourierspacing	= 0.16		; Maximum grid spacing for FFT grid using PME (nm)
+
+; Temperature coupling parameters
+tcoupl		= Nose-Hoover	        ; Modified Berendsen thermostat using velocity rescaling
+tc-grps		= System         	; Define groups to be coupled separately to temperature bath
+tau_t		= 0.1           	; Group-wise coupling time constant (ps)
+ref_t		= 300 	        	; Group-wise reference temperature (K)
+
+; Miscellaneous control parameters
+; Dispersion correction
+DispCorr	= EnerPres		; Dispersion corrections for Energy and Pressure for vdW cut-off
+; Initial Velocity Generation
+gen_vel		= no			; Velocity is read from the previous run
+; Centre of mass (COM) motion removal relative to the specified groups
+nstcomm		= 1			; COM removal frequency (steps)
+periodic_molecules = yes
+
+;Walls(Justin's Wall)
+;nwall         = 2           ; xy periodicity needs this
+;wall_atomtype = C1 C1
+;Wall_type     = 9-3
+;wall_density  = 5   5
+;wall_r_linpot= -1
+;wall_ewald_zfac = 3
+;ewald-geometry = 3dc
+
