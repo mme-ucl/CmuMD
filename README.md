@@ -63,7 +63,7 @@ PRINT ARG=LEFT,RIGHT STRIDE=500 FILE=COLVAR_2
 	* `GROUP`  =  the solvent atom group  
 	* `NSV`    =  number of atoms per solvent molecule   
 	* `DCR`    =  distance of the CR inner boundary from the left and right interfaces of the crystal slab (all lengths are in units of Z box size!!!). 
-	* `CRSIZE` =  width of the CR (on each side of the crystal).  
+	* `CRSIZE` =  width of the CR.  
 	* `WF`     =  Fermi function length at the CR boundaries. 
 	* `ASYMM`  =  Indicates that this statement defines the concentration on the left side of the membrane slab, `ASYMM=-1` indicates the left side of the membrane slab, `ASYMM=1` indicates the right side of the membrane slab.  
 	
