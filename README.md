@@ -60,7 +60,7 @@ PRINT ARG=LEFT,RIGHT STRIDE=500 FILE=COLVAR_2
 	These line computes the methane number density in a CR located at distance DCR from the left and right sides of the membrane slab. 
 	
 	__Keywords__:  
-	* `GROUP`  =  the solvent atom group  
+	* `GROUP`  =  the group of atoms of the specie that controlled  
 	* `NSV`    =  number of atoms per solvent molecule   
 	* `DCR`    =  distance of the CR inner boundary from the left and right interfaces of the crystal slab (all lengths are in units of Z box size!!!). 
 	* `CRSIZE` =  width of the CR.  
