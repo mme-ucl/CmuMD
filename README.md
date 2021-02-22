@@ -34,10 +34,10 @@ __In order to install CmuMD:__
 3. [compile PLUMED 2](https://www.plumed.org/doc-v2.6/user-doc/html/_installation.html)
 
 
-### Example 1: Concentration Driven Flux - Methane permeation in a ZIF-8 membrane
+### Example 1: Concentration Driven Flux - methane permeation in a ZIF-8 membrane
 
 This example reports the PLUMED file used to implement the method discussed in [Ozcan et al., Chem Sci, 2017](https://pubs.rsc.org/en/content/articlepdf/2017/sc/c6sc04978h). 
-The input files of for a typical simulation are available in `Examples/Example1_methane_permeation_in_ZIF-8_membrane`
+The input files for a typical simulation are available in `Examples/Example1_methane_permeation_in_ZIF-8_membrane`
 
 ```
 GROUP ATOMS=5361-5785:1 LABEL=solute
@@ -76,9 +76,10 @@ PRINT ARG=LEFT,RIGHT STRIDE=500 FILE=COLVAR_2
 	Print statement. More about the syntax of `RESTRAINT` can be found in the [PLUMED 2 manual](https://www.plumed.org/doc-v2.6/user-doc/html/_p_r_i_n_t.html)
 
 
+### Example 2: Concentration Driven Flux - methanol-water separation in an MFI membrane
 
-
-
+This example illustrates the applixaiton of the CGD-MD method for the liquid phase separation of methanol-water mixture. [Madero-Castro et al., 2021](https://t.co/kRg0Jz4czS?amp=1). 
+The input files are available in `Examples/Example2_methanol_water_separation_in_MFI_membrane`
 
 
 
