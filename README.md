@@ -70,7 +70,7 @@ PRINT ARG=LEFT,RIGHT STRIDE=500 FILE=COLVAR_2
 3. `RESTRAINT ARG=LEFT AT=1.03  KAPPA=8000.0 LABEL=lres`
 `RESTRAINT ARG=RIGHT AT=0.0   KAPPA=500000.0 LABEL=rres`  
 
-	Impose an armonic constraint on the concentration, in the left and right volumes. More about the syntax of `RESTRAINT` can be found in the [PLUMED 2 manual](https://www.plumed.org/doc-v2.6/user-doc/html/_r_e_s_t_r_a_i_n_t.html) 
+	Impose an harmonic constraint on the concentration, in the left and right volumes. More about the syntax of `RESTRAINT` can be found in the [PLUMED 2 manual](https://www.plumed.org/doc-v2.6/user-doc/html/_r_e_s_t_r_a_i_n_t.html) 
  
 4. `PRINT ARG=LEFT,RIGHT STRIDE=500 FILE=COLVAR_2` 
 	Print statement. More about the syntax of `RESTRAINT` can be found in the [PLUMED 2 manual](https://www.plumed.org/doc-v2.6/user-doc/html/_p_r_i_n_t.html)
