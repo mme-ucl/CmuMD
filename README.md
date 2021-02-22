@@ -34,7 +34,7 @@ __In order to install CmuMD:__
 3. [compile PLUMED 2](https://www.plumed.org/doc-v2.6/user-doc/html/_installation.html)
 
 
-### Example 1: Concentration Driven Flux
+### Example 1: Concentration Driven Flux - Methane permeation in a ZIF-8 membrane
 
 This example reports the PLUMED file used to implement the method discussed in [Ozcan et al., Chem Sci, 2017](https://pubs.rsc.org/en/content/articlepdf/2017/sc/c6sc04978h). 
 The input files of for a typical simulation are available in `Examples/Example1_methane_permeation_in_ZIF-8_membrane`
