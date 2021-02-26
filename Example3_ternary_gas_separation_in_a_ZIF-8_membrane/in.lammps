@@ -1,0 +1,33 @@
+units           real
+atom_style      full
+boundary        p p p
+
+pair_style      lj/cut/coul/long 14.0
+bond_style      harmonic
+angle_style     harmonic 
+dihedral_style  charmm
+improper_style cvff
+pair_modify     tail yes mix arithmetic
+read_data       data.lammps        
+neigh_modify    delay 0 every 1 check yes
+group rig1 id 12790 12909 10570 10689 8350 8469 11076 9620 8856 7400 13296 11840 11077 9660 8857 7440 13297 11880 11625 12091 9405 9871 7185 7651 6130 6249 3910 4029 1690 1809 4416 2960 2196 740 6636 5180 4417 3000 2197 780 6637 5220 4965 5431 2745 3211 525 991
+kspace_style    pppm 0.0001
+special_bonds lj 0.0 0.0 0.5 coul 0.0 0.0 0.5 dihedral yes
+group carb type 14 15
+group hydro type 16 17
+group nitro  type 18 19
+group mem subtract all rig1 carb hydro nitro
+timestep        1.000
+velocity    all create 300 4928459 rot yes dist gaussian
+fix 11 rig1 setforce 0.0 0.0 0.0
+fix 1 carb rigid/nvt molecule temp 300.00 300.0 200
+fix 10 hydro rigid/nvt molecule temp 300.00 300.0 200
+fix 20 nitro rigid/nvt molecule temp 300.00 300.0 200
+fix 2 mem nvt temp 300.0 300.0 200 #so 1.0 1.0 1
+fix 22 all plumed plumedfile plumed.inp outfile plumed.out
+thermo  1000
+thermo_style   custom step temp press pe ke etotal
+dump    2 all custom 1000 out.lammpstrj id type x y z
+dump_modify 2 append  yes sort id
+restart 500000 NVT.restart
+run    15000000
