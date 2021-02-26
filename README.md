@@ -81,9 +81,10 @@ PRINT ARG=LEFT,RIGHT STRIDE=500 FILE=COLVAR_2
 This example illustrates the application of the CGD-MD method for the liquid phase separation of methanol-water mixture. [Madero-Castro et al., 2021](https://t.co/kRg0Jz4czS?amp=1). 
 The input files are available in `Examples/Example2_methanol_water_separation_in_MFI_membrane`
 
+### Example 3: Concentration Driven Flux - ternary gas separation in a ZIF-8 membrane (with LAMMPS)
 
-
-
+This example illustrates the application of the CGD-MD method for the separation of a ternary gas mixture. [Namsani et al., 2021](https://dx.doi.org/10.1002/adts.201900120). 
+The input files are available in `Example3_ternary_gas_separation_in_a_ZIF-8_membrane`
 
 
 
