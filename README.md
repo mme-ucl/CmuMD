@@ -87,7 +87,10 @@ This example illustrates the application of the CGD-MD method for the separation
 The input files are available in `Example3_ternary_gas_separation_in_a_ZIF-8_membrane`
 
 
+### Example 4: Concentration-dependent features of the NaCl double layer (with GROMACS 2018.6)
 
+This example illustrates the application of the CmuMD method for investigating the structure of the solution / graphite interface. 
+The input files are available in `Example4_NaCl_at_graphite`
 
 
 
