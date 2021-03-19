@@ -1,0 +1,8 @@
+; Graphite with electrolytes in aqueous solution
+;
+ CJ   12.01100  ; Graphite C
+ HJ    1.00800  ; Graphite H
+ OW   15.99940  ; O SPC/E Water
+ HW    1.00800  ; H SPC/E Water
+ NA   22.98977  ; Na+ 
+ CL   35.45300  ; Cl- 

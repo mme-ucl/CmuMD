@@ -1,0 +1,33 @@
+# Plumed (v2) input file to implement CmuMD
+# Please consider citing Perego et al. J Chem Phys 142, 144113 (2015)
+# Please consider citing Finney et al. 
+
+# Define groups of atoms
+gra: GROUP ATOMS=1-9152:1 
+sod: GROUP ATOMS=43320-43737:1
+chl: GROUP ATOMS=43738-44155:1
+slt: GROUP ATOMS=43320-44155:1
+wat: GROUP ATOMS=9153-43319:1
+sln: GROUP ATOMS=9153-44155:1 
+all: GROUP ATOMS=1-44155:1
+
+# Provide parameters for the CV
+nwat: CMUMD GROUP=wat NSV=3 DCR=0.25 CRSIZE=0.15 WF=0.0001 NINT=1.0 NZ=291
+nsod: CMUMD GROUP=sod NSV=1 FIXED=0.5 DCR=0.25 CRSIZE=0.15 WF=0.0001 NINT=0.1 NZ=291
+nchl: CMUMD GROUP=chl NSV=1 FIXED=0.5 DCR=0.25 CRSIZE=0.15 WF=0.0001 NINT=0.1 NZ=291
+
+# CmuMD is implemented as a restraint on the densities of species in CR
+RESTRAINT ARG=nsod AT=0.3011 KAPPA=20000.0 LABEL=resna
+RESTRAINT ARG=nchl AT=0.3011 KAPPA=20000.0 LABEL=rescl
+#RESTRAINT ARG=n_water AT=29.5 KAPPA=20.0 LABEL=wres
+
+
+# Report the densities and bias
+PRINT ...
+ARG=nsod,nchl,nwat,resna.bias,rescl.bias
+ STRIDE=50
+ FILE=COLVAR
+... PRINT
+
+
+

@@ -1,0 +1,34 @@
+[ atomtypes ] 
+;
+; name     at.num    mass    charge   ptype          sigma      epsilon
+;
+; Graphite from OPLS/AA
+  CJ       6     12.01100     0.000       A    3.55000e-01  2.92880e-01 
+  HJ       1      1.00800     0.000       A    2.42000e-01  1.25520e-01 
+; Joung Cheatham ions with SPC/E
+  OW       8     15.99940    -0.8476      A    3.16556E-01  6.50170E-01
+  HW1      1      1.00800     0.4238      A    1.00000E-01  0.00000E+00
+  HW2      1      1.00800     0.4238      A    1.00000E-01  0.00000E+00
+  NA      11     22.98977     1.000       A    2.15900E-01  1.47553E+00
+  CL      17     35.45300    -1.000       A    4.83000E-01  5.34978E-02
+[ nonbond_params ]
+; i        j         func           sigma      epsilon
+;
+; Graphite-water from Wu and Aluru 2013 (using RPA data from Ma et al. 2011)
+  CJ       OW           1     3.43600e-01  3.55640e-01
+  CJ       HW1          1     2.69000e-01  1.60247e-01
+  CJ       HW2          1     2.69000e-01  1.60247e-01
+;
+; Joung and Cheatham 2009
+  OW         HW1        1     1.00000E-01  0.00000E+00
+  OW         HW2        1     1.00000E-01  0.00000E+00
+  OW         NA         1     2.66300E-01  9.79831E-01
+  OW         CL         1     3.99800E-01  1.86502E-01
+  HW1        NA         1     1.00000E-01  0.00000E+00
+  HW2        NA         1     1.00000E-01  0.00000E+00
+  HW1        CL         1     1.00000E-01  0.00000E+00
+  HW2        CL         1     1.00000E-01  0.00000E+00
+  NA         CL         1     3.49500E-01  2.80951E-01
+; from Williams et al. 2017
+  NA         CJ         1     2.85450E-01  3.00000E+00
+  CL         CJ         1     4.19000E-01  6.00000E-01

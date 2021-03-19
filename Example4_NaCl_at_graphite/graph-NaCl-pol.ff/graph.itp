@@ -1,0 +1,39 @@
+; OPLS/AA force field for carbon-based structures such as CNTs and graphenes
+
+[ bondtypes ]
+; i       j    func         b0         kb
+  CJ      CJ      1    0.14000   392459.2   ; Aromatic C-C
+  CJ      HJ      1    0.10800   307105.6   ; Aromatic C-H
+
+[ angletypes ]
+; i       j       k    func       th0        cth      
+  CJ      CJ      CJ      1   120.000    527.184   
+  CJ      CJ      HJ      1   120.000    292.880   
+  HJ      CJ      HJ      1   117.000    292.880   
+
+[ dihedraltypes ]
+; Ryckaert-Bellemans Dihedrals
+; i       j       k       l    func       
+  CJ      CJ      CJ      CJ      3     30.33400   0.00000 -30.33400   0.00000   0.00000   0.00000 
+  HJ      CJ      CJ      HJ      3     30.33400   0.00000 -30.33400   0.00000   0.00000   0.00000 
+  HJ      CJ      CJ      CJ      3     30.33400   0.00000 -30.33400   0.00000   0.00000   0.00000 
+;
+; Improper OPLS dihedrals to keep groups planar.
+; Since these functions are periodic of the form 1-cos(2*x), they are actually
+; implemented as proper dihedrals [1+cos(2*x+180)] for the moment,
+; i       j       k       l    func
+;  CJ      CJ      CJ      CJ      1     180.0      4.60240   2
+
+[ dihedraltypes ]
+; Improper OPLS dihedrals to keep groups planar.
+; (OPLS doesnt use impropers for chiral atoms).
+; Since these functions are periodic of the form 1-cos(2*x), they are actually
+; implemented as proper dihedrals [1+cos(2*x+180)] for the moment, 
+; to keep things compatible.
+; The defines are used in ffoplsaa.rtp or directly in your .top file.
+#define improper_C_C_C_C    1    180.0    4.60240   2
+
+;[ impropertypes]
+; Sinclair et al. 2018 used a harmonic improper dihedral to maintain planarity:
+; i       j       k       l    func
+;  CJ      CJ      CJ      CJ      1     180.0      20.92000   

@@ -1,0 +1,55 @@
+title                   = Graphite with NaCl(aq)
+; Run parameters
+integrator              = md        ; leap-frog integrator
+nsteps                  = 1000  ; steps to integrte
+dt                      = 0.002    ; 1 fs
+comm-mode               = linear    ; remove centre of mass motion
+; comm-grps               = Other     ; CoM calculation from GRA only
+; Output control
+nstxout                 = 100000    ; suppress bulky .trr file by specifying 
+nstvout                 = 0         ; 0 for output frequency of nstxout,
+nstfout                 = 0         ; nstvout, and nstfout
+nstenergy               = 50        ; save energies every 10.0 ps
+nstlog                  = 50        ; update log file every 10.0 ps
+nstxout-compressed      = 50        ; save compressed coordinates every 10.0 ps
+compressed-x-grps       = System    ; save the whole system
+; Bond parameters
+continuation            = no        ; Restarting after NPT 
+constraint_algorithm    = lincs     ; holonomic constraints 
+constraints             = h-bonds   ; bonds involving H are constrained
+lincs_iter              = 1         ; accuracy of LINCS
+lincs_order             = 4         ; also related to accuracy
+; Neighborsearching
+cutoff-scheme           = Verlet    ; Buffered neighbor searching
+ns_type                 = grid      ; search neighboring grid cells
+nstlist                 = 20        ; 20 fs, largely irrelevant with Verlet scheme
+rcoulomb                = 0.9       ; short-range electrostatic cutoff (in nm)
+rvdw                    = 0.9       ; short-range van der Waals cutoff (in nm)
+lj-pme-comb-rule        = Lorentz-Berthelot
+; Potential-switch
+;vdw-modifier            = yes
+;Potential-switch        = yes
+;rvdw-switch             = 1.0
+;rvdw                    = 1.2
+; Electrostatics
+coulombtype             = PME       ; Particle Mesh Ewald for long-range electrostatics
+pme_order               = 4         ; cubic interpolation
+fourierspacing          = 0.10      ; grid spacing for FFT
+; Temperature coupling is on
+tcoupl                  = V-rescale             ; modified Berendsen thermostat
+tc-grps                 = Other Water Ion   ; two coupling groups - more accurate
+tau_t                   = 0.1  0.1  0.1           ; time constant, in ps
+ref_t                   = 298  298  298           ; reference temperature, one for each group, in K
+; Pressure coupling is on
+;pcoupl                  = Parrinello-Rahman     ; Pressure coupling on in NPT
+;pcoupltype              = anisotropic             ; uniform scaling of box vectors
+;tau_p                   = 1.0                   ; time constant, in ps
+;ref_p                   = 1.0 1.0 1.0 0.0 0.0 0.0             ; reference pressure, in bar
+;compressibility         = 4.5e-5 4.5e-5 4.5e-5 0.0 0.0 0.0       ; isothermal compressibility of water, bar^-1
+; Periodic boundary conditions
+pbc                     = xyz       ; 3-D PBC
+periodic_molecules      = yes
+; Dispersion correction
+DispCorr                = EnerPres  ; account for cut-off vdW scheme
+; Velocity generation
+gen_vel                 = no        ; Velocity generation is off
