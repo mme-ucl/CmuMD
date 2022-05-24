@@ -15,7 +15,7 @@ A Ozcan, C Perego, M Salvalaglio, M Parrinello, O Yazaydin
 
 The version hosted here has been developed by [Dr. Claudio Perego](https://scholar.google.co.uk/citations?user=TwqxhpUAAAAJ) and is maintained by the [Salvalaglio](http://www.ucl.ac.uk/molecular-modelling) and [Yazaydin](https://www.ucl.ac.uk/~ucecoya/) groups at [UCL Chemical Engineering](https://www.ucl.ac.uk/chemical-engineering/). 
 
-The method has been further developed into a "cannibalistic" variant, and to model crystal nucleation at constant supersaturation by [Dr. Tarak Karmakar](https://scholar.google.co.uk/citations?hl=en&user=LWBFC34AAAAJ). 
+The method has been further developed into a "[cannibalistic](https://pubs.acs.org/doi/abs/10.1021/acs.jctc.8b00191)" variant, and adapted into a [spherical variant](https://github.com/Tarakk/plumed-cumd) to model crystal nucleation at constant supersaturation by [Dr. Tarak Karmakar](https://scholar.google.co.uk/citations?hl=en&user=LWBFC34AAAAJ). 
 
 ### Installation
 
@@ -99,12 +99,13 @@ The input files are available in `Examples/Example2_methanol_water_separation_in
 This example illustrates the application of the CGD-MD method for the separation of a ternary gas mixture. [Namsani et al., 2021](https://dx.doi.org/10.1002/adts.201900120). 
 The input files are available in `Example3_ternary_gas_separation_in_a_ZIF-8_membrane`
 
-
 ### Example 4: Concentration-dependent features of the NaCl double layer (with GROMACS 2018.6)
 
 This example illustrates the application of the CmuMD method for investigating the structure of the solution / graphite interface. 
 The input files are available in `Example4_NaCl_at_graphite`
 
+### PLUMED Tutorial 
 
+A tutorial on the use of CmuMD is available as part of the [PLUMED documentation](https://www.plumed.org/doc-master/user-doc/html/masterclass-22-8.html). 
 
  
